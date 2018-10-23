@@ -24,9 +24,18 @@
         <processorPath useClasspath="true" />
         <module name="javabase" />
       </profile>
+      <profile default="false" name="Annotation profile for springbootStudy" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="springbootStudy" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="javabase" target="1.5" />
+      <module name="springbootdemo" target="1.5" />
+      <module name="springbootStudy" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
