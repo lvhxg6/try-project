@@ -11,6 +11,13 @@ import org.springframework.context.annotation.Scope;
 
 /**
  * Created by huixiaolv on 23/10/2018.
+ *
+ * 说明：
+ *     1、声明队列
+ *     2、声明Exchange
+ *     3、声明Binding，将exchange、routeKey、queue绑定起来
+ *     4、publisher发布消息的时候，将消息发布到exchange中，exchange根据绑定的routeKey，将消息路由到指定队列中
+ *     5、consumer监听指定的队列，从队列中获取消息消费
  */
 @Configuration
 public class RabbitConfig {
@@ -102,7 +109,7 @@ public class RabbitConfig {
 
     /**
      * 将队列topic.messages与exchange绑定，binding_key为topic.#,模糊匹配
-     * @param queueMessage
+     * @param queueMessages
      * @param exchange
      * @return
      */

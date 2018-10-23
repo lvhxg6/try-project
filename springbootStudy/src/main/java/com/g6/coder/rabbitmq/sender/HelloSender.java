@@ -9,6 +9,13 @@ import java.util.Date;
 
 /**
  * Created by huixiaolv on 23/10/2018.
+ *
+ * rabbitMQTemplate.convertAndSend(String routeKey,Object obj);
+ * rabbitMQTemplate.convertAndSend(String exchange,String routeKey,Object obj)
+ *
+ *  publisher 将消息发送给Exchange，Exchange根据routeKey将消息路由到指定的队列
+ *  consumer  监听队列消息，当队列中有消息的时候，获取消息进行处理
+ *
  */
 @Component
 public class HelloSender {
